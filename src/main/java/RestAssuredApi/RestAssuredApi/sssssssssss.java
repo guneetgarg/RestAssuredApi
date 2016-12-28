@@ -4,14 +4,13 @@ import static io.restassured.RestAssured.given;
 
 import org.testng.annotations.Test;
 
-import io.restassured.RestAssured;
+import io.restassured.response.Response;
 
 public class sssssssssss {
 
 	@Test
 	public void makeSureThatGoogleIsUp() {
-		RestAssured.baseURI = "https://reqres.in";
-		RestAssured.basePath ="/api/users?page=2";
-		System.out.println(given().when().get(RestAssured.basePath));
+		Response response = given().when().get("https://reqres.in/api/users?page=2");
+		System.out.println(response.asString());
 	}
 }

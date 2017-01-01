@@ -1,16 +1,22 @@
-package RestAssuredApi.RestAssuredApi;
+package com.getapi;
 
 import static io.restassured.RestAssured.given;
 
 import org.testng.annotations.Test;
 
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
-public class GetApi {
+public class GetApi implements Constant {
 
 	@Test
 	public void makeSureThatGoogleIsUp() {
-		Response response = given().when().get("http://echo.jsontest.com/title/ipsum/content/blah");
+		
+		RestAssured.baseURI = baseURI;
+		RestAssured.basePath = basePath;
+		
+		Response response = given().when().get();
 		System.out.println(response.asString());
+		
 	}
 }

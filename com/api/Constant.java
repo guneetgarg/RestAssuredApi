@@ -1,4 +1,4 @@
-package com.getapi;
+package com.api;
 
 public interface Constant {
 

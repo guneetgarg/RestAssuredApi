@@ -17,7 +17,7 @@ import io.restassured.response.Response;
 
 public class GetApi implements Constant {
 
-	// @Test
+	 @Test
 	public void makeSureThatGoogleIsUp() {
 
 		RestAssured.baseURI = baseURI;
